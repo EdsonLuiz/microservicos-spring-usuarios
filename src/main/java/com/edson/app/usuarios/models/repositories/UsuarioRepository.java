@@ -6,7 +6,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 
-import com.edson.app.usuarios.models.entities.Usuario;
+import com.edson.app.commons.usuarios.models.entities.Usuario;
+
 
 @RepositoryRestResource(path = "usuarios")
 public interface UsuarioRepository extends PagingAndSortingRepository<Usuario, Long> {
@@ -15,4 +16,5 @@ public interface UsuarioRepository extends PagingAndSortingRepository<Usuario, L
 	
 	@Query("select u from Usuario u where u.userName=?1")
 	public Usuario getByUsername(String username);
+
 }
