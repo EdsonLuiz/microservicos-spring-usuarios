@@ -12,7 +12,7 @@ import com.edson.app.commons.usuarios.models.entities.Usuario;
 @RepositoryRestResource(path = "usuarios")
 public interface UsuarioRepository extends PagingAndSortingRepository<Usuario, Long> {
 	@RestResource(path = "findusername")
-	public Usuario findByUserName(@Param("name") String userName);
+	public Usuario findByUserName(@Param("name") String username);
 	
 	@Query("select u from Usuario u where u.userName=?1")
 	public Usuario getByUsername(String username);
