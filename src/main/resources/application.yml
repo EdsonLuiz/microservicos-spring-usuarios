@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: servico-usuarios
+  jpa:
+    hibernate:
+      ddl-auto: create
     
 
 eureka:
